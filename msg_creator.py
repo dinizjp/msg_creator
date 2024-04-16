@@ -36,11 +36,11 @@ else:
 # Modelo de mensagem selecionado automaticamente com base na escolha de opções
 def gerar_mensagem(numero_sorteio, nome_kit, preco_cotinha, link_sorteio, kit_opcoes, emoji):
     emoji_selecionado = opcoes_emojis_opcao[emoji] if kit_opcoes else opcoes_emojis_normal[emoji]
-    mensagem_comum = "LINK 👇🏻🔗💰 (SE NÃO TIVER EM AZUL PRA CLICAR NO LINK, SALVE NOSSO CONTATO!!!!)📌\n"
+    mensagem_comum = "*LINK* 👇🏻🔗💰 (SE NÃO TIVER EM AZUL PRA CLICAR NO LINK, SALVE NOSSO CONTATO!!!!)📌\n"
     if kit_opcoes:
-        mensagem = f"{emoji_selecionado}SORTEIO #{numero_sorteio} - {nome_kit} {emoji_selecionado}\n\n* GANHADOR IRÁ ESCOLHER UM DOS KITS ACIMA 👆🏼👆🏼\n\n💸 APENAS R$ {preco_cotinha} A COTINHA {emoji_selecionado}\n\n{mensagem_comum}{link_sorteio}"
+        mensagem = f"*{emoji_selecionado}SORTEIO #{numero_sorteio} - {nome_kit} {emoji_selecionado}* \n\n*GANHADOR IRÁ ESCOLHER UM DOS KITS ACIMA* 👆🏼👆🏼\n\n💸 *APENAS R$ {preco_cotinha} A COTINHA {emoji_selecionado}*\n\n{mensagem_comum}{link_sorteio}"
     else:
-        mensagem = f"{emoji_selecionado} SORTEIO {numero_sorteio}- {nome_kit} {emoji_selecionado}\n\n💸 SOMENTE R$ {preco_cotinha} A COTINHA\n\n{mensagem_comum}{link_sorteio}"
+        mensagem = f"*{emoji_selecionado} SORTEIO {numero_sorteio}- {nome_kit} {emoji_selecionado}*\n\n💸 *SOMENTE R$ {preco_cotinha} A COTINHA*\n\n{mensagem_comum}{link_sorteio}"
     return mensagem
 
 # Botão para gerar mensagem
